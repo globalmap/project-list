@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { projects, type Project } from "../../utils/projects";
 import { Card, Row, Col, Typography, Modal, Button, Divider, Tag } from "antd";
-import { LinkOutlined, PlayCircleOutlined } from "@ant-design/icons";
+import { GithubOutlined, LinkOutlined, PlayCircleOutlined } from "@ant-design/icons";
 
 const { Paragraph, Text } = Typography;
 
@@ -67,15 +67,15 @@ const List: React.FC = () => {
               Visit Site
             </Button>
           ),
-          // selectedProject?.repo && (
-          //   <Button
-          //     key='repo'
-          //     href={selectedProject.repo}
-          //     target='_blank'
-          //     icon={<GithubOutlined />}>
-          //     GitHub
-          //   </Button>
-          // ),
+          selectedProject?.repo && (
+            <Button
+              key='repo'
+              href={selectedProject.repo}
+              target='_blank'
+              icon={<GithubOutlined />}>
+              GitHub
+            </Button>
+          ),
           <Button key='close' onClick={handleClose}>
             Close
           </Button>,
