@@ -97,18 +97,18 @@ const List: React.FC = () => {
 
             <Paragraph>{selectedProject.descriptions}</Paragraph>
 
-            <Divider orientation='left'>📌 Основна інформація</Divider>
+            <Divider orientation='left'>📌 Main Information</Divider>
             <Row gutter={[16, 16]}>
               <Col span={12}>
-                <Text strong>Категорія:</Text> {selectedProject.category}
+                <Text strong>Category:</Text> {selectedProject.category}
               </Col>
               {selectedProject.client && (
                 <Col span={12}>
-                  <Text strong>Клієнт:</Text> {selectedProject.client}
+                  <Text strong>Client:</Text> {selectedProject.client}
                 </Col>
               )}
               <Col span={12}>
-                <Text strong>Статус:</Text>{" "}
+                <Text strong>Status:</Text>{" "}
                 <Tag
                   color={
                     selectedProject.status === "active"
@@ -121,17 +121,17 @@ const List: React.FC = () => {
                 </Tag>
               </Col>
               <Col span={12}>
-                <Text strong>Тривалість:</Text> {selectedProject.duration}
+                <Text strong>Duration:</Text> {selectedProject.duration}
               </Col>
               <Col span={12}>
-                <Text strong>Команда:</Text> {selectedProject.teamSize} людей
+                <Text strong>Team:</Text> {selectedProject.teamSize} people
               </Col>
               <Col span={12}>
-                <Text strong>Дата старту:</Text> {selectedProject.date}
+                <Text strong>Start Date:</Text> {selectedProject.date}
               </Col>
             </Row>
 
-            <Divider orientation='left'>💡 Технології</Divider>
+            <Divider orientation='left'>💡 Technologies</Divider>
             <div>
               {selectedProject.technologies &&
                 selectedProject.technologies.map((tech, i) => (
@@ -141,7 +141,7 @@ const List: React.FC = () => {
                 ))}
             </div>
 
-            <Divider orientation='left'>🏷️ Теги</Divider>
+            <Divider orientation='left'>🏷️ Tags</Divider>
             <div>
               {selectedProject.tags &&
                 selectedProject.tags.map((tag, i) => <Tag key={i}>{tag}</Tag>)}
@@ -150,10 +150,10 @@ const List: React.FC = () => {
             {selectedProject.testimonials &&
               selectedProject.testimonials.length > 0 && (
                 <>
-                  <Divider orientation='left'>🗣 Відгуки</Divider>
+                  <Divider orientation='left'>🗣 Testimonials</Divider>
                   {selectedProject.testimonials.map((t, i) => (
                     <Paragraph key={i} italic>
-                      “{t.quote}” — <Text strong>{t.name}</Text>
+                      "{t.quote}" — <Text strong>{t.name}</Text>
                     </Paragraph>
                   ))}
                 </>
@@ -161,13 +161,13 @@ const List: React.FC = () => {
 
             {selectedProject.videoDemoUrl && (
               <>
-                <Divider orientation='left'>🎬 Відео демо</Divider>
+                <Divider orientation='left'>🎬 Video Demo</Divider>
                 <Button
                   type='dashed'
                   icon={<PlayCircleOutlined />}
                   href={selectedProject.videoDemoUrl}
                   target='_blank'>
-                  Переглянути відео
+                  Watch Video
                 </Button>
               </>
             )}
