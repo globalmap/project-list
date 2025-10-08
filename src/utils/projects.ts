@@ -1,26 +1,24 @@
+export type ProjectStatus = 'archived' | 'inProgress' | 'active';
+
 export interface Project {
   id: number;
   title: string;
-  slug?: string;
+  slug: string;
   descriptions: string;
   imgSrc: string;
-  link?: string;
-  date?: string;
-  status?: "active" | "archived" | "inProgress";
-  technologies?: string[];
-  client?: string;
-  category?: string;
-  tags?: string[];
-  teamSize?: number;
+  link: string;
+  date: string;
+  status: ProjectStatus;
+  technologies: string[];
+  client: string;
+  category: string;
+  tags: string[];
+  teamSize: number;
   duration?: string;
+  isFeatured: boolean;
   repo?: string;
-  isFeatured?: boolean;
-  videoDemoUrl?: string;
-  testimonials?: {
-    name: string;
-    quote: string;
-  }[];
 }
+
 export const projects: Project[] = [
   {
     id: 0,
@@ -37,7 +35,7 @@ export const projects: Project[] = [
     tags: ["3D", "eCommerce", "WebGL"],
     teamSize: 4,
     duration: "3 weeks",
-    isFeatured: true,           
+    isFeatured: false,           
   },
   {
     id: 1,
@@ -53,7 +51,6 @@ export const projects: Project[] = [
     category: "Demo",
     tags: ["demo", "antd"],
     teamSize: 1,
-    // duration: "1 day",
     repo: "https://github.com/globalmap/gallery",
     isFeatured: false,
   },
@@ -62,8 +59,7 @@ export const projects: Project[] = [
     title: "Sofa Cofigurator",
     slug: "living-spaces",
     descriptions: "Sofa Cofigurator for living spaces",
-    imgSrc:
-      "https://globalmap.github.io/project-list/projects/living-spaces.png",
+    imgSrc: "https://globalmap.github.io/project-list/projects/living-spaces.png",
     link: "https://www.livingspaces.com/pdp-soma-foam-125-inch-2-piece-sectional-with-left-arm-facing-sofa-303369?mcid=MC25736",
     date: "2022-01-25",
     status: "archived",
@@ -73,7 +69,7 @@ export const projects: Project[] = [
     tags: ["eCommerce", "3D", "WebGL"],
     teamSize: 4,
     duration: "6 month",
-    isFeatured: false,
+    isFeatured: true,
   },
   {
     id: 3,
@@ -97,8 +93,7 @@ export const projects: Project[] = [
     title: "Booking Service",
     slug: "booking-service",
     descriptions: "Booking Service for YourPriceBooking",
-    imgSrc:
-      "https://globalmap.github.io/project-list/projects/yourpricebooking.png",
+    imgSrc: "https://globalmap.github.io/project-list/projects/yourpricebooking.png",
     link: "https://www.yourpricebooking.com/",
     date: "2024-03-05",
     status: "archived",
@@ -108,15 +103,14 @@ export const projects: Project[] = [
     tags: ["eCommerce", "Localizations"],
     teamSize: 3,
     duration: "8 month",
-    isFeatured: false,
+    isFeatured: true,
   },
-    {
+  {
     id: 5,
     title: "Markdown Editor",
     slug: "markdown-editor",
     descriptions: "Markdown Editor [ALPHA]",
-    imgSrc:
-      "https://globalmap.github.io/project-list/projects/markdown-editor.png",
+    imgSrc: "https://globalmap.github.io/project-list/projects/markdown-editor.png",
     link: "https://globalmap.github.io/markdown-editor/",
     date: "2024-07-05",
     status: "archived",
