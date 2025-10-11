@@ -122,4 +122,22 @@ export const projects: Project[] = [
     duration: "1 week",
     isFeatured: false,
   },
+  {
+  id: 6,
+  title: "Space Explorer Dashboard",
+  slug: "space-explorer",
+  descriptions: "Real-time space data visualization using NASA and SpaceX APIs",
+  imgSrc: "https://globalmap.github.io/project-list/projects/space-explorer.png",
+  link: "https://globalmap.github.io/space-explorer/",
+  date: "2024-09-10",
+  status: "archived",
+  technologies: ["React", "TypeScript", "D3.js", "REST API"],
+  client: "Me",
+  category: "Data Visualization",
+  tags: ["API", "demo", "data-viz", "astronomy"],
+  teamSize: 1,
+  duration: "2 days",
+  repo: "https://github.com/globalmap/space-explorer",
+  isFeatured: true,
+}
 ];
