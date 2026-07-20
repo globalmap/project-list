@@ -1,1 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
+
+@theme {
+	--font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+	--font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+	--color-bp-950: #0a1120;
+	--color-bp-900: #0f1b2e;
+	--color-bp-850: #132339;
+	--color-bp-800: #16283f;
+	--color-paper: #ede8dc;
+	--color-paper-dim: #c9c2ae;
+	--color-ink: #10151c;
+	--color-accent: #ff5a2e;
+	--color-accent-dim: #c94a26;
+	--color-draft: #5fd4c8;
+	--color-complete: #4f9d6e;
+	--color-line: #96b4dc;
+}
+
+:root {
+	color-scheme: dark;
+}
+
+body {
+	background-color: var(--color-bp-950);
+	font-family: var(--font-sans);
+}
+
+.bp-grid {
+	background-image:
+		linear-gradient(to right, rgba(150, 180, 220, 0.07) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(150, 180, 220, 0.07) 1px, transparent 1px);
+	background-size: 42px 42px;
+}
+
+.font-mono-tight {
+	font-family: var(--font-mono);
+	letter-spacing: 0.02em;
+}
+
+/* Ant Design Segmented, re-skinned as a blueprint toolbar */
+.bp-segmented.ant-segmented {
+	background: var(--color-bp-900) !important;
+	border: 1px solid rgba(150, 180, 220, 0.18);
+	border-radius: 2px !important;
+	padding: 4px !important;
+}
+
+.bp-segmented .ant-segmented-item {
+	transition: color 0.4s ease;
+	border-radius: 1px !important;
+}
+
+.bp-segmented .ant-segmented-item-label {
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	letter-spacing: 0.06em;
+	padding: 6px 12px !important;
+	color: var(--color-paper-dim);
+	transition: color 0.4s ease;
+}
+
+/* smoother, less snappy slide */
+.bp-segmented .ant-segmented-thumb {
+	box-sizing: border-box;
+	background: var(--color-bp-950) !important;
+	border: 1px solid var(--color-accent) !important;
+	border-radius: 1px !important;
+	transition:
+		left 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+		width 0.5s cubic-bezier(0.65, 0, 0.35, 1) !important;
+}
+
+/* active item text, drawn above the thumb */
+.bp-segmented .ant-segmented-item-selected {
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+.bp-segmented .ant-segmented-item-selected .ant-segmented-item-label {
+	color: var(--color-accent) !important;
+}
+
+/* Ant Design Modal, re-skinned as a spec sheet */
+.bp-modal .ant-modal-content {
+	background: var(--color-bp-900) !important;
+	border: 1px solid rgba(150, 180, 220, 0.18);
+	border-radius: 2px !important;
+	padding: 0 !important;
+}
+
+.bp-modal .ant-modal-close {
+	color: var(--color-paper-dim) !important;
+	top: 20px !important;
+	right: 20px !important;
+}
+
+.bp-modal .ant-modal-close:hover {
+	color: var(--color-accent) !important;
+}
