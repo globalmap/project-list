@@ -94,12 +94,14 @@ function App() {
 				</div>
 
 				<div className="mx-auto max-w-7xl px-4 pb-8">
-					<Segmented
-						className="bp-segmented"
-						options={categoryOptions}
-						value={filter}
-						onChange={(val) => setFilter(val as string)}
-					/>
+					<div className="bp-segmented-scroll">
+						<Segmented
+							className="bp-segmented"
+							options={categoryOptions}
+							value={filter}
+							onChange={(val) => setFilter(val as string)}
+						/>
+					</div>
 				</div>
 
 				<div ref={gridRef} className="mx-auto max-w-7xl px-4 pb-24">
